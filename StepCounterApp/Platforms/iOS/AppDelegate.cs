@@ -14,14 +14,14 @@ public class AppDelegate : MauiUIApplicationDelegate
     protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
     public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
     {
-        var pedometer = new CMPedometer();
+         pedometer = new CMPedometer();
 
         if (CMPedometer.IsStepCountingAvailable)
         {
             var startDate = NSDate.Now;
             try
             {
-                pedometer.StartPedometerUpdates(NSDate.Now, (data, error) =>
+                pedometer.StartPedometerUpdates(startDate, (data, error) =>
                 {
                     Console.WriteLine($"CMPedometer update: error={error}, steps={data?.NumberOfSteps}");
 

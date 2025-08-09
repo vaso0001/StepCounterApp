@@ -28,8 +28,11 @@
 	</array>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/appicon.appiconset</string>
-	<key>NSMotionUsageDescriptions</key>
+	<key>NSMotionUsageDescription</key>
 	<string>This app uses motion data to count your steps.</string>
-
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+	</array>
 </dict>
 </plist>
